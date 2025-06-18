@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import MenuBg from "../components/Menu/MenuBg";
+import MenuItems from "../components/Menu/MenuItems";
+---
+
+<BaseLayout>
+  <div class="relative min-h-screen w-full overflow-hidden">
+    <!-- Navbar sits on top of Swiper -->
+    <div class="relative z-20">
+      <Navbar client:load />
+      <hr class="border-white/20" />
+    </div>
+
+    <!-- Fullscreen background Swiper slider -->
+    <div class="">
+      <MenuBg client:load />
+    </div>
+
+    <div class="">
+      <MenuItems client:load />
+    </div>
+  </div>
+
+  <div>
+    <Footer />
+  </div>
+</BaseLayout>

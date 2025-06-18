@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import ContactBg from "../components/Contact/ContactBg";
+---
+
+<BaseLayout>
+  <div class="relative min-h-screen w-full overflow-hidden">
+    <!-- Navbar sits on top of Swiper -->
+    <div class="relative z-20">
+      <Navbar client:load />
+      <hr class="border-white/20" />
+    </div>
+
+    <div>
+      <ContactBg />
+    </div>
+  </div>
+
+  <div>
+    <Footer />
+  </div>
+</BaseLayout>

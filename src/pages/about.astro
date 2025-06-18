@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import StorySection from "../components/About/StorySection";
+import AboutSection2 from "../components/About/AboutSection2";
+---
+
+<BaseLayout>
+  <div class="relative min-h-screen w-full overflow-hidden">
+    <!-- Navbar sits on top of Swiper -->
+    <div class="relative z-20">
+      <Navbar client:load />
+      <hr class="border-white/20" />
+    </div>
+
+    <!-- Fullscreen background Swiper slider -->
+    <div class="absolute inset-0 z-10">
+      <StorySection client:load />
+    </div>
+  </div>
+
+  <div class="mt-2">
+    <AboutSection2 />
+  </div>
+
+  <div class="mt-10"></div>
+
+  <div>
+    <Footer />
+  </div>
+</BaseLayout>

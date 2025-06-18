@@ -1,16 +1,40 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HomeSwiper from "../components/Home/HomeSwiper";
+import Navbar from "../components/Navbar";
+import Welcome from "../components/Home/WelcomeSection";
+import TestimonialSection from "../components/Home/TestimonialSection";
+import ReservationSection from "../components/Home/ReservationSection";
+import Footer from "../components/Footer";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <!-- Outer container with relative for layering -->
+  <div class="relative min-h-screen w-full overflow-hidden">
+    <!-- Navbar sits on top of Swiper -->
+    <div class="relative z-20">
+      <Navbar client:load />
+      <hr class="border-white/20" />
+    </div>
+
+    <!-- Fullscreen background Swiper slider -->
+    <div class="absolute inset-0 z-10">
+      <HomeSwiper client:load />
+    </div>
+  </div>
+  <div class="mt-2">
+    <Welcome client:load />
+  </div>
+
+  <div class="mt-10">
+    <TestimonialSection client:load />
+  </div>
+
+  <div class="mt-10">
+    <ReservationSection />
+  </div>
+
+  <div>
+    <Footer />
+  </div>
+</BaseLayout>
