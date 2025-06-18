@@ -90,22 +90,26 @@ const ReservationSection = () => {
       </div>
 
       {/* images  */}
-      <div className="flex justify-center items-center gap-10">
+      <div className="flex justify-center items-center gap-12">
         <img
           src="/images/zomato-logo.png"
           alt="MyRestaurant Logo"
-          className="h-24 w-24 mx-auto lg:mx-0 text-center"
+          className=" mx-auto lg:mx-0 text-center"
         />
         <img
           src="/images/swiggy.png"
           alt="MyRestaurant Logo"
-          className="h-24 w-24 mx-auto lg:mx-0 text-center"
+          className=" mx-auto lg:mx-0 text-center"
         />
         <img
           src="/images/Dineout-Logo.png"
           alt="MyRestaurant Logo"
-          className="h-24 w-24 mx-auto lg:mx-0 text-center"
+          className=" mx-auto lg:mx-0 text-center"
         />
+      </div>
+
+      <div className="mt-20">
+
       </div>
     </>
   );
