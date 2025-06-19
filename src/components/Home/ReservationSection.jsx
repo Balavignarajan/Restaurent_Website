@@ -84,7 +84,7 @@ const ReservationSection = () => {
 
         <p className="text-gray-500 leading-relaxed tracking-wide max-w-xl mx-auto my-6">
           We are blessed enough to be honoured with great awards from <br></br>{" "}
-          food critics and organizations all over the world.
+          food critics and organizations all over the Universe.
         </p>
         <p className="text-lg text-[#d3a971]">Order Now</p>
       </div>
